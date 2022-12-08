@@ -1,1 +1,1 @@
-Please check out the article/instructions associated with this example [here](https://blog.frontenac.tech/?p=258).
+Please check out the article/instructions associated with this example [GitOps Part 2 – Bootstrapping ArgoCD](https://blog.frontenac.tech/?p=258).
