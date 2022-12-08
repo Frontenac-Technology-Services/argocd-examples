@@ -1,0 +1,23 @@
+# Other cluster to manage - Fill in the encrypted data!
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  annotations:
+    sealedsecrets.bitnami.com/namespace-wide: "true"
+  creationTimestamp: null
+  name: other-cluster
+spec:
+  encryptedData:
+    config: 
+    name:
+    server: 
+  template:
+    data: null
+    metadata:
+      annotations:
+        sealedsecrets.bitnami.com/namespace-wide: "true"
+      labels:
+        argocd.argoproj.io/secret-type: cluster
+      name: other-cluster
+      namespace: argocd
+    type: Opaque
