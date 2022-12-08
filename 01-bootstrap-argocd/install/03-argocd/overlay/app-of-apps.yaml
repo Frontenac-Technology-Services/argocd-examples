@@ -7,11 +7,11 @@ spec:
   syncPolicy:
     automated: {}
   source:
-    repoURL: git@github.com:Frontenac-Technology-Services/argocd-examples.git
+    repoURL: REPLACEME
     targetRevision: main
     path: 01-bootstrap-argocd/argocd/applications
     directory:
       recurse: true
   destination:
-    server: in-cluster
+    server: https://kubernetes.default.svc
     namespace: argocd

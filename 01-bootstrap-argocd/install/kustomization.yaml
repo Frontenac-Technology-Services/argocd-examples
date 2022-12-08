@@ -6,8 +6,9 @@ bases:
 - 02-nginx-ingress
 - 03-argocd/overlay
 
-# Update the "value" parameters below with your preferred URL/FQDN
 patches:
+
+  # Update the "value" parameters below with your preferred URL/FQDN
   - target:
       kind: Ingress
       name: argocd-server-ingress
@@ -22,3 +23,12 @@ patches:
       - op: replace
         path: /data/url
         value: https://argocd.example.com
+
+  # Update the "value" parameters below with the HTTPS URL for your forked repository
+  - target:
+      kind: Application
+      name: app-of-apps
+    patch: |-
+      - op: replace
+        path: /spec/source/repoURL
+        value: https://github.com/Frontenac-Technology-Services/argocd-examples
