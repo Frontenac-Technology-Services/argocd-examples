@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-of-apps
+spec:
+  project: default
+  syncPolicy:
+    automated: {}
+  source:
+    repoURL: git@github.com:Frontenac-Technology-Services/argocd-examples.git
+    targetRevision: main
+    path: 01-bootstrap-argocd/argocd/applications
+    directory:
+      recurse: true
+  destination:
+    server: in-cluster
+    namespace: argocd
