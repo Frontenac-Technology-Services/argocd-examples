@@ -7,7 +7,7 @@ bases:
 patches:
 - target:
     kind: Ingress
-    name: argocd-server-ingress
+    name: guestbook-ingress
   patch: |-
     - op: replace
       path: /spec/rules/0/host
