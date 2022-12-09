@@ -22,7 +22,6 @@ spec:
         sealedsecrets.bitnami.com/namespace-wide: "true"
       labels:
         argocd.argoproj.io/secret-type: cluster
-        type: exernal-cluster
       name: second-cluster
       namespace: argocd
     type: Opaque
