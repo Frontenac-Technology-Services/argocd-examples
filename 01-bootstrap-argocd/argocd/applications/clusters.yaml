@@ -10,4 +10,4 @@ spec:
     targetRevision: main # Branch/Tag/CommitSHA to reference
     path: 01-bootstrap-argocd/argocd/configs/clusters # Path to configurations
   destination:
-    name: in-cluster
+    name: in-cluster # Deploy to the ArgoCD cluster
