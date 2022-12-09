@@ -14,4 +14,4 @@ patches:
     patch: |-
       - op: replace
         path: /spec/source/repoURL
-        value: https://github.com/Frontenac-Technology-Services/argocd-examples
+        value: https://github.com/<your_username>/argocd-examples
