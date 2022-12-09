@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   generators:
-  - cluster: {} # Create this application for every cluster
+  - clusters: {} # Create this application for every cluster
   template:
     metadata:
       name: 'nginx-ingress-{{name}}' # Define the name of the generated "Application" type resources. {{name}} will reference the cluster name
