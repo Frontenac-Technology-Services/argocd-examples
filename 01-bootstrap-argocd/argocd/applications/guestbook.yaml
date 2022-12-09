@@ -12,7 +12,7 @@ spec:
     spec:
       project: default # Project to put applications under in ArgoCD
       source:
-        repoURL: https://github.com/Frontenac-Technology-Services/argocd-examples # Repository to use, update with your forked repository
+        repoURL: https://github.com/<your_username>/argocd-examples # Repository to use, update with your forked repository
         targetRevision: main # Branch/Tag/CommitSHA to reference
         path: 01-bootstrap-argocd/argocd/configs/guestbook/overlay/{{name}} # Path to configurations by cluster name
         kustomize: {} # Deploy using Kustomize
