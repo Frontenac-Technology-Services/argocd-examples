@@ -6,6 +6,9 @@ metadata:
 spec:
   generators:
   - clusters: {} # Create this application for every cluster
+      selector:
+        matchLabels:
+          type: exernal-cluster
   template:
     metadata:
       name: 'nginx-ingress-{{name}}' # Define the name of the generated "Application" type resources. {{name}} will reference the cluster name
