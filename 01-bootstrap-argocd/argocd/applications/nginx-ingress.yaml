@@ -21,3 +21,4 @@ spec:
         kustomize: {} # Deploy using Kustomize
       destination:
         name: '{{name}}' # Deploy to the correct cluster
+        namespace: ingress-nginx # Deploy to the ingress-nginx namespace

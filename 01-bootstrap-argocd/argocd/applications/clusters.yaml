@@ -11,3 +11,4 @@ spec:
     path: 01-bootstrap-argocd/argocd/configs/clusters # Path to configurations
   destination:
     name: in-cluster # Deploy to the ArgoCD cluster
+    namespace: argocd # Deploy to the argocd namespace
