@@ -20,9 +20,5 @@ spec:
         env:
         - name: GET_HOSTS_FROM
           value: "dns"
-        resources:
-          requests:
-            cpu: 100m
-            memory: 100Mi
         ports:
         - containerPort: 80
