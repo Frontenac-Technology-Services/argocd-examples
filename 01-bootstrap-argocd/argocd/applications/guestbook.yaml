@@ -18,3 +18,7 @@ spec:
         kustomize: {} # Deploy using Kustomize
       destination:
         name: '{{name}}' # Deploy to the correct cluster
+        namespace: guestbook # Deploy to the guestbook namespace
+      syncPolicy:
+        syncOptions:
+        - CreateNamespace=true # Automatically create the guestbook namespace
