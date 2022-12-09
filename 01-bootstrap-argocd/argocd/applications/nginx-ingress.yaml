@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: nginx-ingress
+  namespace: argocd
+spec:
+  generators:
+  - cluster: {} # Create this application for every cluster
+  template:
+    metadata:
+      name: nginx-ingress-{{name}} # Define the name of the generated "Application" type resources. {{name}} will reference the cluster name
+    spec:
+      project: default # Project to put applications under in ArgoCD
+      source:
+        repoURL: https://github.com/Frontenac-Technology-Services/argocd-examples # Repository to use
+        targetRevision: main # Branch/Tag/CommitSHA to reference
+        path: 01-bootstrap-argocd/argocd/configs/nginx-ingress # Path to configurations
+        kustomize: {} # Deploy using Kustomize
+      destination:
+        name: '{{name}}' # Deploy to the correct cluster
