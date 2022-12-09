@@ -7,23 +7,6 @@ bases:
 - 03-argocd/overlay
 
 patches:
-
-  # Update the "value" parameters below with your preferred URL/FQDN
-  - target:
-      kind: Ingress
-      name: argocd-server-ingress
-    patch: |-
-      - op: replace
-        path: /spec/rules/0/host
-        value: argocd.example.com
-  - target:
-      kind: ConfigMap
-      name: argocd-cm
-    patch: |-
-      - op: replace
-        path: /data/url
-        value: https://argocd.example.com
-
   # Update the "value" parameters below with the HTTPS URL for your forked repository
   - target:
       kind: Application
