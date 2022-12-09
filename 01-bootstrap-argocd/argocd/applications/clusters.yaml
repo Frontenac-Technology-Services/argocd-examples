@@ -13,3 +13,4 @@ spec:
       recurse: true # Get anything in subfolders
   destination:
     name: in-cluster
+    

@@ -6,6 +6,7 @@ metadata:
     sealedsecrets.bitnami.com/namespace-wide: "true"
   creationTimestamp: null
   name: second-cluster
+  namespace: argocd
 spec:
   encryptedData:
     # UPDATE ME!
