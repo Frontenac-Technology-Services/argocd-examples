@@ -8,13 +8,13 @@ metadata:
   name: second-cluster
   namespace: argocd
 spec:
-  encryptedData:
-    # UPDATE ME!
-    config: 
+  encryptedData: 
     # UPDATE ME!
     name: 
     # UPDATE ME!
     server: 
+    # UPDATE ME!
+    config:
   template:
     data: null
     metadata:
